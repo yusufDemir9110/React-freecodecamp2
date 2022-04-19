@@ -5,20 +5,16 @@ import React, { useState } from "react";
 const ShortCircuit = () => {
   const [text, setText] = useState("");
   const [isError, setIsError] = useState(false);
-  const firstValue = text || "hello world"; //if text hasn't a value/is false    return 'hello world'
-  const secondValue = text && "hello world"; // if text hasn't a value/is false      return ''
-
+  const firstValue = text || "hello world";
+  const secondValue = text && "hello world";
   return (
     <div>
-      {/* <h1>{firstValue}</h1>
-      <h1>value:{secondValue}</h1> */}
-      <h1>{text || "john doe"}</h1>
+      <h1>{firstValue}</h1>
+      <h2>value : {secondValue}</h2>
       <button className="btn" onClick={() => setIsError(!isError)}>
-        toogle error
+        toggle error
       </button>
-      {/* {text && <h1>hello world</h1>} */}
-      {isError && <h1>error...</h1>}
-      {isError ? <h1>error</h1> : <h1>no error</h1>}
+      {isError && <h1>error....</h1>}
     </div>
   );
 };

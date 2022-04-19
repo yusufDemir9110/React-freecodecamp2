@@ -5,7 +5,7 @@ const ShowHide = () => {
   return (
     <div>
       <button className="btn" onClick={() => setShow(!show)}>
-        show hide
+        show/hide
       </button>
       {show && <Item />}
     </div>
@@ -23,11 +23,10 @@ const Item = () => {
       window.removeEventListener("resize", checkSize);
     };
   }, []);
-
   return (
     <div style={{ marginTop: "2rem" }}>
-      <h1>window1</h1>
-      <h2>size : {size}</h2>
+      <h1>window</h1>
+      <h2>size:{size} px</h2>
     </div>
   );
 };
